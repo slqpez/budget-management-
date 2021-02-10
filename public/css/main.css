@@ -1,1 +1,94 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  height: 100vh;
+}
+
+body::after {
+  content: "";
+  background: url("../images/background.jpg") no-repeat;
+  background-size: cover;
+  background-position: center center;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  z-index: -1;
+}
+
+body .container {
+  background-color: #fff;
+  width: 70%;
+  height: 500px;
+  border-radius: 15px;
+  padding: 30px;
+  -webkit-box-shadow: 0px 0px 18px 1px black;
+          box-shadow: 0px 0px 18px 1px black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.form-section {
+  width: 50%;
+  color: #FFB400;
+}
+
+.form-section .label-form {
+  font-weight: 700;
+}
+
+.form-section input, .form-section label {
+  display: block;
+}
+
+.form-section input {
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 3px;
+  padding: 6px;
+  padding-bottom: 2px;
+  border-bottom: 2px solid #00A6ED;
+}
+
+.form-section input:focus {
+  outline: none;
+}
+
+.form-section .btn {
+  -webkit-appearance: none;
+  border: none;
+  padding: .9em;
+  margin-top: 1em;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #00A6ED;
+  color: whitesmoke;
+  font-weight: 700;
+}
+
+.form-section .btn:hover {
+  background-color: rgba(0, 166, 237, 0.8);
+}
+
+.form-section .btn:focus {
+  outline: none;
+}
+/*# sourceMappingURL=main.css.map */
