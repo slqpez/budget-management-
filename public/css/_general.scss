@@ -33,7 +33,12 @@ body{
         padding: 30px;
         box-shadow: 0px 0px 18px 1px black;
         display: flex;
-        
+        color:$text-color;
+
+        @media(max-width: $max-width){
+            flex-direction: column;
+        }
         
     }
+   
 }

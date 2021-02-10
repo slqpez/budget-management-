@@ -1,14 +1,18 @@
 .form-section{
     width: 50%;
-    color: $text-color;
+    background-size: cover;
+    padding: 20px;
+    box-shadow: 0px 2px 10px 0px black;
+  
     .label-form{
         font-weight: 700;
     }
     input,label{
         display: block;
+        font-size: 1.2em;
     }
     input{
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         border:none;
         border-radius: 3px;
         padding: 6px;
@@ -17,18 +21,26 @@
         &:focus{
             outline: none;
         }
+        @media(max-width:$max-width){
+            width: 100%;
+           
+        }
     }
 
     .btn{
         -webkit-appearance: none;
         border: none;
         padding: .9em;
+        font-size: 1.1em;
         margin-top: 1em;
         border-radius: 8px;
         cursor: pointer;
         background-color: $btn-color;
         color: whitesmoke;
         font-weight: 700;
+        display: block;
+        margin: auto;
+        box-shadow: 0px 0px 7px 0px $btn-color;
         &:hover{
             background-color: rgba($color: $btn-color, $alpha: .8);
         }
@@ -36,4 +48,12 @@
             outline: none;
         }
     }
+
+    @media(max-width:$max-width){
+        width: auto;
+        margin-bottom: 30px;
+    }
 }
+
+
+
