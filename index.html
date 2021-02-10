@@ -1,32 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="public/css/main.css">
-    <link rel="shortcut icon" href="public/images/favicon.ico" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="public/css/main.css" />
+    <link
+      rel="shortcut icon"
+      href="public/images/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;0,700;0,900;1,300&display=swap"
+      rel="stylesheet"
+    />
     <title>Presupuesto</title>
-    
-</head>
-<body>  
+  </head>
+  <body>
     <div class="container">
-        <section class="form-section">
-            <form action="#" class="form" >
-                <label for="name" class="label-form">Nombre del gasto: </label>
-                <input type="text" id="name-input">
-                <label for="cost" class="label-form">Costo: </label>
-                <input type="text" id="cost-input">
-                <button class="btn">Agregar</button>
-            </form>
-        </section>
-        <section class="results">
-            <h1 class="results-title">Listado de gastos</h1>
-        </section>
+      <section class="form-section">
+        <form action="#" class="form">
+          <label for="name" class="label-form">Nombre del gasto: </label>
+          <input type="text" id="name-input" />
+          <label for="cost" class="label-form">Costo: </label>
+          <input type="text" id="cost-input" />
+          <button class="btn">Agregar</button>
+        </form>
+      </section>
+      <h1 class="results-title">Lista de gastos</h1>
+      <section class="results">
+        
+        <ul class="expense-list">
+          <li class="expense">
+              <div class="expense-description">
+                <p class="expense-description-name">Empanadas</p>
+                <p class="expense-description-cost">$ 2000</p>
+              </div>   
+             <span class="delete">X</span>
+          </li>
+          <li class="expense">
+            <div class="expense-description">
+              <p class="expense-description-name">Panadería</p>
+              <p class="expense-description-cost">$ 7500</p>
+            </div>   
+           <span class="delete">X</span>
+        </li>
+        <li class="expense">
+            <div class="expense-description">
+              <p class="expense-description-name">Panadería</p>
+              <p class="expense-description-cost">$ 7500</p>
+            </div>   
+           <span class="delete">X</span>
+        </li>
+        <li class="expense">
+            <div class="expense-description">
+              <p class="expense-description-name">Panadería</p>
+              <p class="expense-description-cost">$ 7500</p>
+            </div>   
+           <span class="delete">X</span>
+        </li>
+          
+        </ul>
+      </section>
     </div>
-   
+    <div class="rest floating good">
+      <p class="floating-text">Saldo restante</p>
+      <p class="floating-number">$ 400</p>
 
+    </div>
+    <div class="budget floating ">
+        <p class="floating-text">Presupuesto<span></span></p>
+        <p class="floating-number">$ 45000</p>
+    </div>
 
     <script src="src/index.js"></script>
-</body>
+  </body>
 </html>

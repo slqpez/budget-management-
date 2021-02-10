@@ -1,0 +1,40 @@
+.floating{
+    position: fixed;
+    top: 10px;
+    width: auto;
+    border-radius: 20px;
+    padding: 10px;
+    text-align: center;
+}
+.rest{
+    left: 20px;
+}
+.good{
+    background-color: $good-color;
+}
+
+.regular{
+    background-color: $regular-color;
+}
+
+.bad{
+    background-color: $bad-color;
+    color: white;
+    font-weight: bold;
+} 
+
+
+.budget{
+    right: 20px;
+    background-color: $btn-color;
+}
+
+.floating-text{
+    margin-bottom: 5px;
+    font-size: 1.2em;
+}
+.floating-number{
+    font-weight: 900;
+    font-size: 1.3em;
+    
+}
