@@ -7,9 +7,14 @@
     @media(max-height:730px){
         font-size: 1.4em;
     }
+    @media(min-width:801px) {
+    display: none;
+    }
+    
 }
 
 .results {
+    overflow: scroll;
 
     .expense-list {
         text-align: left;
@@ -57,7 +62,8 @@
 
     @media(max-width:$max-width) {
         height          : auto;
-        overflow        : scroll;
 
     }
+  
+
 }

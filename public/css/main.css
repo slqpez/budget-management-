@@ -6,6 +6,11 @@
   font-family: 'Roboto', sans-serif;
 }
 
+html {
+  overflow: hidden;
+  height: 100vh;
+}
+
 body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -17,8 +22,9 @@ body {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  height: 100vh;
+  max-height: 100vh;
   width: 100vw;
+  overflow: auto;
 }
 
 body::after {
@@ -26,7 +32,6 @@ body::after {
   background: url("../images/background.jpg") no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  background-position: center center;
   opacity: 0.7;
   top: 0;
   left: 0;
@@ -38,7 +43,8 @@ body::after {
 
 body .container {
   background-color: #fff;
-  width: 70%;
+  width: 80%;
+  max-width: 700px;
   max-height: 600px;
   border-radius: 15px;
   padding: 30px;
@@ -47,7 +53,7 @@ body .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 70px;
+  margin-top: 200px;
   color: #0D2C54;
 }
 
@@ -72,6 +78,7 @@ body .container {
   padding: 20px;
   -webkit-box-shadow: 0px 2px 10px 0px black;
           box-shadow: 0px 2px 10px 0px black;
+  margin-right: 20px;
 }
 
 .form-section .label-form {
@@ -159,6 +166,16 @@ body .container {
   }
 }
 
+@media (min-width: 801px) {
+  .results-title {
+    display: none;
+  }
+}
+
+.results {
+  overflow: scroll;
+}
+
 .results .expense-list {
   text-align: left;
 }
@@ -208,7 +225,6 @@ body .container {
 @media (max-width: 800px) {
   .results {
     height: auto;
-    overflow: scroll;
   }
 }
 
@@ -219,6 +235,7 @@ body .container {
   border-radius: 20px;
   padding: 10px;
   text-align: center;
+  cursor: pointer;
 }
 
 .rest {
