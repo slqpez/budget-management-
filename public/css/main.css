@@ -66,10 +66,10 @@ body .container {
   }
 }
 
-@media (max-height: 730px) {
+@media (max-height: 840px) {
   body .container {
-    height: 470px;
     margin-top: 120px;
+    height: 500px;
   }
 }
 
