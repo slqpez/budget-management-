@@ -21,11 +21,18 @@ document.addEventListener("DOMContentLoaded", () => {
           UI.showInList(name, cost);
           BDG.updateRest(cost)
           UI.updateInfo(BDG.getRest())
+          UI.remainingBalanceColor(BDG.calculingRest())
           const btnDelete = document.querySelectorAll(".delete");
           const btns = Array.from(btnDelete)
           btns.forEach(btn => {
             btn.addEventListener("click", (e) => {
                 UI.deleteItem(e);
+                const value =e.target.parentNode.children[0].children[1].textContent
+                const number = Number(value.slice(2, value.length))
+                console.log(number)
+                BDG.returnCost(number)
+                UI.updateInfo(BDG.getRest())
+                UI.remainingBalanceColor(BDG.calculingRest())
               });
           });
           

@@ -21,4 +21,24 @@ export default class Budget{
     updateRest(value){
         this._rest -= value
     }
+
+    calculingRest(){
+        const regular =this._budget / 2
+        const bad = this._budget/ 4 
+
+        if(this._rest<bad){
+            return("bad")
+        }
+        if(this._rest<regular){
+            return("regular")
+        }
+        if(this._rest>=regular){
+            return("good")
+        }
+        
+    }
+
+    returnCost(value){
+        this._rest += value
+    }
 }
