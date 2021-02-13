@@ -53,7 +53,8 @@ export default class UI{
         rest.textContent=`$ ${budget}`;
     }
 
-    static showError(msg){
+    
+     showError(msg){
         const form = document.querySelector(".form");
         const p = document.createElement("p");
         p.textContent = msg;
@@ -67,9 +68,12 @@ export default class UI{
         
     }
 
-    static deleteItem(e){
-        e.target.parentNode.remove();
-        this.showError("Costo eliminado correctamente.")
+     deleteItem(e){
+         if(e.target.classList.contains("delete")){
+            e.target.parentNode.remove();
+            this.showError("Costo eliminado correctamente.")
+         }
+       
     }
 
     static updateInfo(value){
