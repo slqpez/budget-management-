@@ -3,4 +3,21 @@ export default class Budget{
         this._budget = budget;
         this._rest = budget;
     }
+
+    getBudget(){
+        return this._budget
+    }
+    setBudget(budget){
+        this._budget = budget
+    }
+    getRest(){
+        return this._rest
+    }
+    setBudget(rest){
+        this._rest = rest
+    }
+
+    updateRest(value){
+        this._rest -= value
+    }
 }

@@ -222,6 +222,10 @@ body .container {
   -webkit-tap-highlight-color: transparent;
 }
 
+.results .expense-list .expense .delete:hover {
+  background-color: rgba(246, 81, 29, 0.8);
+}
+
 @media (max-width: 800px) {
   .results {
     height: auto;

@@ -66,4 +66,9 @@ export default class UI{
         }
         
     }
+
+    static deleteItem(e){
+        e.target.parentNode.remove();
+        this.showError("Costo eliminado correctamente.")
+    }
 }
