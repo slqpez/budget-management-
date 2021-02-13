@@ -71,4 +71,9 @@ export default class UI{
         e.target.parentNode.remove();
         this.showError("Costo eliminado correctamente.")
     }
+
+    static updateInfo(value){
+        const rest = document.querySelector(".rest .floating-number");
+        rest.textContent=`$ ${value}`;
+    }
 }

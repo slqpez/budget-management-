@@ -10,23 +10,30 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       UI.startBudget(budget);
       localStorage.setItem("floatNumber", budget);
+      const BDG = new Budget(budget);
+
+      const btn = document.querySelector(".btn");
+      btn.addEventListener("click", addItem);
+      function addItem(e) {
+        const name = document.querySelector("#name-input").value;
+        const cost = Number(document.querySelector("#cost-input").value);
+        if (cost != "" && cost >= 0 && !isNaN(cost) && name != "") {
+          UI.showInList(name, cost);
+          BDG.updateRest(cost)
+          UI.updateInfo(BDG.getRest())
+          const btnDelete = document.querySelectorAll(".delete");
+          const btns = Array.from(btnDelete)
+          btns.forEach(btn => {
+            btn.addEventListener("click", (e) => {
+                UI.deleteItem(e);
+              });
+          });
+          
+        } else {
+          UI.showError("Campos erróneos o faltantes.");
+        }
+        e.preventDefault();
+      }
     }
   }
 });
-
-const btn = document.querySelector(".btn");
-btn.addEventListener("click", addItem);
-function addItem(e) {
-  const name = document.querySelector("#name-input").value;
-  const cost = Number(document.querySelector("#cost-input").value);
-  if (cost != "" && cost >= 0 && !isNaN(cost) && name != "") {
-    UI.showInList(name, cost);
-    const btnDelete = document.querySelector(".delete");
-    btnDelete.addEventListener("click", (e) => {
-      UI.deleteItem(e);
-    });
-  } else {
-    UI.showError("Campos erróneos o faltantes.");
-  }
-  e.preventDefault();
-}
