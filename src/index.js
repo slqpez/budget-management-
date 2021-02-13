@@ -3,9 +3,6 @@ import Budget from "./modules/Budget.js"
 
 
 
-function App(){
-
-}
 
 document.addEventListener("DOMContentLoaded",()=>{
     const floatNumber = document.querySelector(".floating-number");
@@ -15,6 +12,7 @@ document.addEventListener("DOMContentLoaded",()=>{
             window.location.reload();
         }
         else{
+            const bg = new Budget(budget);
             UI.startBudget(budget);
             localStorage.setItem("floatNumber", budget)
         }
@@ -29,8 +27,13 @@ document.addEventListener("DOMContentLoaded",()=>{
 const btn = document.querySelector(".btn")
 btn.addEventListener("click",addItem)
 function addItem(e){
-    const name =document.querySelector("#name-input")
-    const cost =document.querySelector("#cost-input")
-    UI.showInList(name.value, cost.value)
+    const name =document.querySelector("#name-input").value
+    const cost =Number(document.querySelector("#cost-input").value)
+    if(cost != "" && cost>=0 && !isNaN(cost) && name != "" ){
+        UI.showInList(name, cost)
+       
+    }else{
+        UI.showError("Campos erróneos o faltantes.")
+    }
     e.preventDefault()
 }

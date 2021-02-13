@@ -48,6 +48,22 @@ export default class UI{
 
     static startBudget(budget){
         const budgetCont = document.querySelector(".budget .floating-number");
+        const rest = document.querySelector(".rest .floating-number");
         budgetCont.textContent=`$ ${budget}`;
+        rest.textContent=`$ ${budget}`;
+    }
+
+    static showError(msg){
+        const form = document.querySelector(".form");
+        const p = document.createElement("p");
+        p.textContent = msg;
+        p.style.marginTop ="6px"
+        if(!document.querySelector(".form p")){
+            form.appendChild(p);
+        setTimeout(()=>{
+            p.remove()
+        },3000)
+        }
+        
     }
 }
