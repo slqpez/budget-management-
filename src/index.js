@@ -25,6 +25,11 @@ document.addEventListener("DOMContentLoaded", () => {
           BDG.returnCost(number)
           UI.updateInfo(BDG.getRest())
           UI.remainingBalanceColor(BDG.calculingRest()) 
+          if(BDG.getRest()>=0){
+            const btn = document.querySelector(".btn");
+            btn.classList.remove("disable")
+          }
+
         }
        
         e.preventDefault();
@@ -32,14 +37,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
       function addItem(e) {
         const name = document.querySelector("#name-input").value;
+        const form = document.querySelector(".form")
+        const btn = document.querySelector(".btn");
         const cost = Number(document.querySelector("#cost-input").value);
-        if (cost != "" && cost >= 0 && !isNaN(cost) && name != "") {
+        if (cost != "" && cost >= 0 && !isNaN(cost) && name != "" && !btn.classList.contains("disable")) {
           UI.showInList(name, cost);
           BDG.updateRest(cost);
           UI.updateInfo(BDG.getRest());
           UI.remainingBalanceColor(BDG.calculingRest());
+          form.reset()
+          if(BDG.getRest()<=0){
+            btn.classList.add("disable")
+            ui.showError("No tienes presupuesto.");
+          }
         } else {
-          UI.showError("Campos erróneos o faltantes.");
+          if(btn.classList.contains("disable")){
+            ui.showError("No tienes presupuesto.");
+          }else{
+            ui.showError("Campos erróneos o faltantes.");
+          }
+          
         }
         e.preventDefault();
       }

@@ -140,6 +140,15 @@ body .container {
   }
 }
 
+.form-section .disable {
+  background-color: rgba(128, 128, 128, 0.8);
+  cursor: not-allowed;
+}
+
+.form-section .disable:hover {
+  background-color: rgba(128, 128, 128, 0.8);
+}
+
 @media (max-width: 800px) {
   .form-section {
     width: auto;

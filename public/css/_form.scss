@@ -52,6 +52,14 @@
             
         }
     }
+    .disable{
+        background-color: rgba($color: grey, $alpha: .8);
+        cursor:not-allowed;
+
+        &:hover{
+            background-color: rgba($color: grey, $alpha: .8);
+        }
+    }
 
     @media(max-width:$max-width){
         width: auto;
